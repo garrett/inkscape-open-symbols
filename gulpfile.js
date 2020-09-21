@@ -12,7 +12,7 @@ if (util.env.dest && util.env.iconset ) {
 }
 
 gulp.task('sprites', function () {
-  return gulp.src('**/' + util.env.iconset + '/*.svg')
+  return gulp.src('**/' + util.env.iconset + '/**/*.svg')
     .pipe(cheerio({
         run: function ($) {
             $('[fill]').removeAttr('fill');
